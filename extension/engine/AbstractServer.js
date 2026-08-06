@@ -19,4 +19,8 @@ module.exports = class AbstractServer
     connectPromise(host, user, password){
         return Promise.reject("No implement connectPromise");
     };
+
+    createDatabase(name){
+        return Promise.reject("No implement createDatabase");
+    };
 }

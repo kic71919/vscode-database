@@ -94,6 +94,10 @@ module.exports = class MySQLType extends AbstractServer
         this.query("USE " + name, null);
     };
 
+    createDatabase (name) {
+        this.query("CREATE DATABASE `" + name + "`", null);
+    };
+
     refrestStructureDataBase (currentStructure){
         const that = this;
         this.query("SHOW tables ", function(results){
