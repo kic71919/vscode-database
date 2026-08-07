@@ -46,6 +46,10 @@
         "title": "SQL: Query Advancer Build"
       },
       {
+        "command": "extension.createDatabase",
+        "title": "SQL: Create database"
+      },
+      {
         "command": "extension.saveConfig",
         "title": "SQL: Save current server"
       }

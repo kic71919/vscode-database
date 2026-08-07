@@ -234,6 +234,19 @@ function activate(context) {
         });
     });
 
+    addCommand(context, 'extension.createDatabase', function () {
+        if (menager.currentServer === null) {
+            vscode.window.showErrorMessage('Server not selected');
+            return;
+        }
+        vscode.window.showInputBox({ value: "", prompt: "e.g my_database", placeHolder: "Database name", password: false }).then(function (name) {
+            if (typeof name === 'undefined' || name === '') {
+                return;
+            }
+            menager.createDatabase(name);
+        });
+    });
+
     addCommand(context,'extension.querySQL', function () {
 
         vscode.window.showInputBox({value:"", prompt: "e.g SELECT * FROM table", placeHolder: "Query", password: false}).then(function(output){

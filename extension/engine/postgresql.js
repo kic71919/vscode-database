@@ -151,6 +151,10 @@ module.exports = class PostgreSQLType extends AbstractServer{
         this.query("SET search_path to " + name, null);
     };
 
+    createDatabase (name) {
+        this.query('CREATE DATABASE "' + name + '"', null);
+    };
+
     refrestStructureDataBase (currentStructure) {
         const that = this;
         const selectTables = getSelectTableSql();

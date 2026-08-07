@@ -184,6 +184,11 @@ module.exports = function Menager()
         }
     };
     
+    this.createDatabase = function(name){
+        this.currentServer.createDatabase(name);
+        vscode.window.showInformationMessage('Database \'' + name + '\' created');
+    };
+
     this.changeServerAlias = function(server){
         if(this.currentServer === null){
             return false;
