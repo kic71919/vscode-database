@@ -1,0 +1,23 @@
+{
+  "name": "vscode-database-dev",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "workspace",
+  "workspaceFolder": "/workspaces/vscode-database",
+  "runServices": [
+    "workspace",
+    "mysql",
+    "postgres"
+  ],
+  "forwardPorts": [
+    3306,
+    5432
+  ],
+  "postCreateCommand": "npm install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  }
+}

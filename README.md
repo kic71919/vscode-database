@@ -16,6 +16,27 @@ Extension for Visual Studio Code
     * [Save connection](https://github.com/Bajdzis/vscode-database/blob/master/doc/save-connection.md)
     * [Edit/delete saved connection](https://github.com/Bajdzis/vscode-database/blob/master/doc/edit-connection.md)
 
+## Development environment
+
+This repository includes a Dev Container definition in `.devcontainer/` with:
+
+* Node.js development workspace
+* MySQL (port `3306`)
+* PostgreSQL (port `5432`)
+
+To start developing:
+
+1. Open the repository in VS Code.
+2. Run `Dev Containers: Reopen in Container`.
+3. Wait for `npm install` to finish (runs automatically).
+4. Run `npm run webpack` to build.
+5. Press `F5` to launch the extension host.
+
+Database services credentials:
+
+* MySQL: host `mysql`, user `test`, password `test`, db `testdb`
+* PostgreSQL: host `postgres`, user `test`, password `test`, db `testdb`
+
 ## Check my other extensions!
 
 <table>
